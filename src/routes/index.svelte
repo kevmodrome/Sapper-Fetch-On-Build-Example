@@ -1,13 +1,8 @@
 <style>
   h1,
-  figure,
-  p {
+  figure h1 {
     text-align: center;
-    margin: 0 auto;
-  }
-
-  h1 {
-    font-size: 2.8em;
+    font-size: 2em;
     text-transform: uppercase;
     font-weight: 700;
     margin: 0 0 0.5em 0;
@@ -25,29 +20,28 @@
 
   p {
     margin: 1em auto;
-  }
-
-  @media (min-width: 480px) {
-    h1 {
-      font-size: 4em;
-    }
+    max-width: 600px;
   }
 </style>
 
 <svelte:head>
-  <title>Sapper project template</title>
+  <title>Sapper Fetch On Build Example</title>
 </svelte:head>
 
-<h1>Great success!</h1>
+<h1>Sapper Fetch On Build Example</h1>
 
 <p>
   A simple example showcasing how to make on export/build fetches get fetched
   and made static. Uses a script to fetch data before building. Look in
-  scripts/get-starships.js.
+  scripts/get-starships.js to see the implementation.
 </p>
 
 <p>
+  Repository can be found
   <strong>
-    Try editing this file (src/routes/index.svelte) to test live reloading.
+    <a href="https://github.com/kevmodrome/Sapper-Fetch-On-Build-Example">
+      here
+    </a>
   </strong>
+  .
 </p>
