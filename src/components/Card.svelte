@@ -14,7 +14,7 @@
     padding: 20px 0;
   }
   .header {
-    color: tomato;
+    color: rebeccapurple;
   }
   .footer {
     border-top: 1px solid rgba(0, 0, 0, 0.4);
