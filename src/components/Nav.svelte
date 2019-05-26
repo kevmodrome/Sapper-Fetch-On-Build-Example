@@ -51,10 +51,18 @@
 <nav>
   <ul>
     <li>
-      <a class={segment === undefined ? 'selected' : ''} href=".">home</a>
+      <a
+        rel="prefetch"
+        class={segment === undefined ? 'selected' : ''}
+        href=".">
+        home
+      </a>
     </li>
     <li>
-      <a class={segment === 'starships' ? 'selected' : ''} href="starships">
+      <a
+        rel="prefetch"
+        class={segment === 'starships' ? 'selected' : ''}
+        href="starships">
         starships
       </a>
     </li>
