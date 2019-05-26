@@ -1,35 +1,6 @@
-<script context="module">
-  const query = `
-		query {
-				allStarships {
-					name
-          class
-          films {
-            title
-          }
-				}
-			}
-	`;
-  const url = "https://swapi.graph.cool/";
-  const opts = {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ query })
-  };
-
-  export async function preload() {
-    return this.fetch(url, opts)
-      .then(res => res.json())
-      .then(res => res.data.allStarships)
-      .then(starships => {
-        return { starships };
-      });
-  }
-</script>
-
 <script>
   import Card from "../components/Card.svelte";
-  export let starships;
+  import starships from "./_starships.js";
 </script>
 
 <style>
@@ -50,7 +21,7 @@
 <p>This page shows a list of starships from Star Wars.</p>
 
 <div class="grid">
-  {#each starships as starship}
+  {#each starships.data.allStarships as starship}
     <Card>
       <h1 slot="header">{starship.name}</h1>
        {starship.class}

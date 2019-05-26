@@ -4,6 +4,7 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "sapper dev",
+    "update": "node scripts/get-starships.js",
     "build": "sapper build --legacy",
     "export": "sapper export --legacy",
     "start": "node __sapper__/build",
@@ -14,6 +15,7 @@
   "dependencies": {
     "compression": "^1.7.1",
     "nanographql": "^2.0.0",
+    "node-fetch": "^2.6.0",
     "polka": "^0.5.0",
     "sirv": "^0.4.0"
   },
